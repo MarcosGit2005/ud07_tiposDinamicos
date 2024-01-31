@@ -5,7 +5,7 @@ import java.util.*;
 public class Bombo {
     private Set<Bola> bombo; // setBolas
     public Bombo(){
-        bombo = new LinkedHashSet<>();
+        bombo = new LinkedHashSet<>(); // Para que tenga en cuenta el orden de inserción y le funcione el shuffle()
     }
     public Bombo(Collection<Bola> bolas){
         bombo = new LinkedHashSet<>(bolas);
@@ -36,11 +36,21 @@ public class Bombo {
         bombo.remove(bolaQuitada);
         return bolaQuitada;
     }
+    public Bola getBola(){ // removeBola pero con Iterator
+        Bola bola=null;
+        Iterator<Bola> iterador = bombo.iterator();
+        // quitamos el elemento de la posición 0
+        if (iterador.hasNext()){
+            bola = iterador.next();
+            iterador.remove();
+        }
+        return bola;
+    }
     @Override
     public String toString(){
         String cad = "[";
         for (Bola bola:bombo)
             cad += bola.toString() + ", ";
-        return cad.substring(0,cad.length()-2) + "]";
+        return "Bombo: " + cad.substring(0,cad.length()-2) + "]";
     }
 }
