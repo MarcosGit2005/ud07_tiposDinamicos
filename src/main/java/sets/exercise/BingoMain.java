@@ -11,8 +11,8 @@ public class BingoMain {
         System.out.println(bombo);
 
         Tablero tablero = new Tablero();
-        for (int i = 0; i < 98; i++) {
-            tablero.addBola(new Bola(i+1));
+        for (int i = 99; i > 0 ; i--) { // Da igual el orden de inserción porque se ordena según el compareTo
+            tablero.addBola(new Bola(i));
         }
         System.out.println(tablero);
     }
