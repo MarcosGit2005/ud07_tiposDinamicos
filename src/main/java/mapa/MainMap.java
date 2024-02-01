@@ -57,7 +57,7 @@ public class MainMap {
         }
 
         System.out.println("\n\nImprimir clave-valor con forEach(): ");
-        // impromir clave-valor con el metodo forEach
+        // imprimir clave-valor con el metodo forEach
         fruta.forEach((frutilla,precio) -> System.out.println(" --> clave: " + frutilla + ", valor: " + precio));
     }
 }

@@ -1,14 +1,22 @@
 package EjerciciosColeccion.Ejercicio1;
 
+import es.ieslavereda.Persona;
+
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
-import java.time.temporal.TemporalAmount;
+import java.util.Comparator;
 
 public class Trabajador implements Comparable<Trabajador>{
     private String DNI;
     private String nombre;
     private String apellido;
     private LocalDate fechaNacimiento;
+    public static final Comparator<Trabajador> SORT_BY_AGE = new Comparator<>() {
+        @Override
+        public int compare(Trabajador trabajador, Trabajador trabajador2) {
+            return trabajador.fechaNacimiento.compareTo(trabajador2.fechaNacimiento);
+        }
+    };
     public Trabajador(String DNI,String nombre,String apellido,LocalDate fechaNacimiento){
         this.DNI=DNI;
         this.nombre=nombre;
