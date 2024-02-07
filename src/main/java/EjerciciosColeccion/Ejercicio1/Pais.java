@@ -1,8 +1,11 @@
 package EjerciciosColeccion.Ejercicio1;
 
+import java.util.Comparator;
+
 public class Pais implements Comparable<Pais>{
     private String nombre;
     private int numHabitantes;
+    public static Comparator<Pais> SORT_BY_POPULATION = (p1,p2) -> p1.getNumHabitantes()-p2.getNumHabitantes();
     public Pais(String nombre,int numHabitantes){
         this.nombre=nombre;
         this.numHabitantes=numHabitantes;
