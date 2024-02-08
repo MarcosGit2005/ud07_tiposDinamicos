@@ -58,7 +58,7 @@ public class Ejercicio1Main {
         System.out.println("\nListado de los paises ordenados alfabéticamente: ");
         TreeSet<Pais> setOrdenadoPaisesStream = new TreeSet<>(mapaTrabajadorPais.values());
         setOrdenadoPaisesStream.stream().sorted((p1,p2)->p1.getNombre().compareTo(p2.getNombre()))
-                .map(p -> p.getNombre()).forEach(System.out::println);
+                .map(Pais::getNombre).forEach(System.out::println);
         System.out.println("\nListado trabajadores ordenados por edad: ");
         mapaTrabajadorPais.keySet().stream().sorted((t1,t2)->(int)(t2.getEdad()- t1.getEdad())).forEach(System.out::println);
 
@@ -87,7 +87,7 @@ public class Ejercicio1Main {
         for (Pais pais:new TreeSet<>(mapaTrabajadorPais.values())){
             cad += pais.toString();
             cad += "\n" + mapaTrabajadorPais.keySet().stream().filter(t -> mapaTrabajadorPais.get(t).equals(pais))
-                    .sorted((t1,t2)->(int)(t1.getEdad()-t2.getEdad())).map(t->t.getNombre())
+                    .sorted((t1,t2)->(int)(t1.getEdad()-t2.getEdad())).map(Trabajador::getNombre)
                     .collect(Collectors.joining(", ","Trabajadores de " + pais.getNombre() + ": ",".\n"));
         }
         System.out.println(cad);
