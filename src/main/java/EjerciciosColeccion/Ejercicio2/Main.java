@@ -10,7 +10,7 @@ public class Main {
 
         PeliculaTO p2 = new PeliculaTO("movie 42");
         p2.addDirector("Studio 26");
-        p2.addActor("Super Mario","Chris Pratt");
+        p2.addActor("El cagon","Chris Pratt");
 
         PeliculaTO p3 = new PeliculaTO("family guy");
         p3.addDirector("nnefjwsnfjks");
