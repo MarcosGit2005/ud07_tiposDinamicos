@@ -9,6 +9,35 @@ public class Main {
 
         Concurso eurovision = new Concurso();
 
+        eurovision.addPaisesParticipantes(new Pais("Suecia","A","Dancing Queen"));
+        eurovision.addPaisesParticipantes(new Pais("Israel","B","Toy"));
+        eurovision.addPaisesParticipantes(new Pais("Italia","C","Volare"));
+        eurovision.addPaisesParticipantes(new Pais("Finlandia","D","Hard Rock Hallelujah" ));
+        eurovision.addPaisesParticipantes(new Pais("Estonia","E","Everybody"));
+        eurovision.addPaisesParticipantes(new Pais("Australia","F","Sound of Silence"));
+        eurovision.addPaisesParticipantes(new Pais("Bélgica","G","City Lights"));
+        eurovision.addPaisesParticipantes(new Pais("Austria","H","Rise Like a Phoenix"));
+        eurovision.addPaisesParticipantes(new Pais("España","I","Vivo Cantando"));
+        eurovision.addPaisesParticipantes(new Pais("Republica Checa","J","Friend of a Friend"));
+        eurovision.addPaisesParticipantes(new Pais("Lituania","K","Love is Blind"));
+        eurovision.addPaisesParticipantes(new Pais("Armenia","L","Not Alone"));
+        eurovision.addPaisesParticipantes(new Pais("Chipre","M","Fuego"));
+        eurovision.addPaisesParticipantes(new Pais("Suiza","N","She Got Me"));
+        eurovision.addPaisesParticipantes(new Pais("Ucrania","O","1944"));
+        eurovision.addPaisesParticipantes(new Pais("Francia","P","Mercy"));
+        eurovision.addPaisesParticipantes(new Pais("Noruega","Q","Fairytale"));
+        eurovision.addPaisesParticipantes(new Pais("Portugal","R","Amar pelos dois"));
+        eurovision.addPaisesParticipantes(new Pais("Eslovenia","S","Here for You"));
+        eurovision.addPaisesParticipantes(new Pais("Moldavia","T","Hey Mamma!"));
+        eurovision.addPaisesParticipantes(new Pais("Albania","U","Suus"));
+        eurovision.addPaisesParticipantes(new Pais("Reino Unido","V","Puppet on a String"));
+        eurovision.addPaisesParticipantes(new Pais("Serbia","W","Molitva"));
+        eurovision.addPaisesParticipantes(new Pais("Polonia","X","Color of Your Life"));
+        eurovision.addPaisesParticipantes(new Pais("Croacia","Y","My Friend"));
+        eurovision.addPaisesParticipantes(new Pais("Alemania","Z","Satellite"));
+
+        eurovision.hacerVotaciones();
+
         System.out.println(eurovision.getPaisesParticipantes()
                 .stream().map(Pais::toString)
                 .collect(Collectors.joining(",\n\t","Paises de eurovisión:\n\t","\n" + lineaSeparatoriaEjercicios)));
